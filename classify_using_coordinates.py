@@ -38,10 +38,10 @@ def extract_tile_to_infer(tile_size, raster_file, tiles_dir, points_shp):
     return None
 
 tile_size = [512, 512]
-raster_file = '/tmp/remix/month_1/ORCEUG17-merc-cloud.tif'
-points_shp = '/tmp/remix/month_3/shp/points_click2.shp'
-tiles_dir = '/tmp/remix/month_3/tiles'
-save_dir = '/tmp/remix/month_3'
+raster_file = '/data/remix/ORCEUG17-merc-cloud.tif'
+points_shp = '/data/remix/shp/points_click2.shp'
+tiles_dir = '/data/remix/tiles'
+save_dir = '/data/remix'
 
 if not os.path.exists(tiles_dir):
     os.mkdir(tiles_dir)
