@@ -2,6 +2,10 @@ FROM tensorflow/tensorflow:latest-devel
 
 COPY requirements.txt                  /root
 
+RUN apt-get update \
+      && apt-get install -y --no-install-recommends \
+           libgdal-dev libsm6 libxext6
+
 RUN pip install -r requirements.txt
 
 COPY def_classify.py                   /root
